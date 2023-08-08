@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 RUN apt update
-RUN apt install qemu-kvm *zenhei* xz-utils gnome-system-monitor mate-system-monitor  git xfce4 xfce4-terminal tightvncserver curl wget -y
+RUN export DEBIAN_FRONTEND=noninteractive && apt install qemu-kvm *zenhei* xz-utils gnome-system-monitor mate-system-monitor  git xfce4 xfce4-terminal tightvncserver curl wget -y
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
 RUN curl -LO https://proot.gitlab.io/proot/bin/proot
 RUN chmod 755 proot

@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:20.04
 RUN apt update
 RUN apt install qemu-kvm *zenhei* xz-utils gnome-system-monitor mate-system-monitor  git mate xfce4-terminal tightvncserver curl wget -y
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz

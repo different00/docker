@@ -1,7 +1,6 @@
 FROM ubuntu:20.04
 RUN apt update
-RUN export DEBIAN_FRONTEND=noninteractive && apt install qemu-kvm *zenhei* xz-utils dbus-x11 x11-xserver-utils xorg gnome-system-monitor mate-system-monitor git kde-plasma-desktop xfce4-goodies xfce4-terminal tightvncserver curl wget -y
-CMD startdde
+RUN export DEBIAN_FRONTEND=noninteractive && apt install xz-utils dbus-x11 x11-xserver-utils xorg gnome-system-monitor mate-system-monitor git mate xfce4-goodies xfce4-terminal tightvncserver curl wget -y
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
 RUN tar -xvf v1.2.0.tar.gz
 RUN mkdir  $HOME/.vnc

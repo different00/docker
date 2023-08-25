@@ -1,12 +1,8 @@
 FROM ubuntu:20.04
-RUN add-apt-repository ppa:ubuntudde-dev/stable
 RUN apt update
 RUN export DEBIAN_FRONTEND=noninteractive && apt install qemu-kvm *zenhei* xz-utils dbus-x11 x11-xserver-utils xorg gnome-system-monitor mate-system-monitor git ubuntudde-dde xfce4-goodies xfce4-terminal tightvncserver curl wget -y
 CMD startdde
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
-RUN curl -LO https://proot.gitlab.io/proot/bin/proot
-RUN chmod 755 proot
-RUN mv proot /bin
 RUN tar -xvf v1.2.0.tar.gz
 RUN mkdir  $HOME/.vnc
 RUN echo '114514' | vncpasswd -f > $HOME/.vnc/passwd

@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 RUN apt update
 RUN export DEBIAN_FRONTEND=noninteractive && apt install xz-utils dbus-x11 x11-xserver-utils xorg gnome-system-monitor mate-system-monitor git xfce4-goodies xfce4-terminal tightvncserver curl wget -y
-RUN apt-get update && apt-get install software-properties-common && apt install ukui-desktop-environment
+RUN apt-get update && apt-get install software-properties-common -y && apt install ukui-desktop-environment -y
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
 RUN tar -xvf v1.2.0.tar.gz
 RUN mkdir  $HOME/.vnc

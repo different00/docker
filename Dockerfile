@@ -1,6 +1,6 @@
 FROM ubuntu
 RUN apt update
-RUN apt install qemu-kvm xz-utils dbus-x11 x11-xserver-utils xorg gnome-system-monitor mate-system-monitor git mate xfce4-goodies xfce4-terminal tigervnc-server curl wget -y
+RUN DEBIAN_FRONTEND=noninteractive apt install qemu-kvm *zenhei* xz-utils dbus-x11 x11-xserver-utils xorg gnome-system-monitor mate-system-monitor git mate xfce4-goodies xfce4-terminal tigervnc-server curl wget -y
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
 RUN tar -xvf v1.2.0.tar.gz
 RUN mkdir  $HOME/.vnc
